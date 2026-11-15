@@ -1,0 +1,6 @@
+{
+  "name": "بوصلة مصر الخضراء – Green Egypt",
+  "description": "خريطة تفاعلية لجمهورية مصر العربية تعرض أهم مشروعات الاقتصاد الأخضر والاستدامة في مختلف المحافظات ودورها في التنمية الاقتصادية والبيئية.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

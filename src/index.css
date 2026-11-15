@@ -1,0 +1,101 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@layer base {
+  :root {
+    --color-cream-canvas: #fbf8f1;
+    --color-cream-surface: #f3ede0;
+    --color-olive-primary: #4a5d23;
+    --color-olive-muted: #65783d;
+    --color-dark-green: #163022;
+    --color-burgundy: #7a1c33;
+    --color-ink: #1e241b;
+    --color-ink-muted: #52594c;
+    --color-hairline: #ddd5c3;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: "IBM Plex Sans Arabic", system-ui, -apple-system, sans-serif;
+    background-color: var(--color-cream-canvas);
+    color: var(--color-ink);
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--color-cream-canvas);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  .font-editorial {
+    font-family: "Amiri", Georgia, serif;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Leaflet RTL & custom theme integration */
+.leaflet-container {
+  font-family: "IBM Plex Sans Arabic", system-ui, -apple-system, sans-serif;
+  background-color: #ebe5d5;
+  z-index: 1;
+}
+
+.leaflet-control-attribution {
+  font-size: 11px !important;
+  background-color: rgba(251, 248, 241, 0.9) !important;
+  color: #52594c !important;
+  direction: ltr;
+}
+
+.leaflet-tooltip.egypt-city-label {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  color: #163022;
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  text-shadow:
+    0 1px 2px rgba(251, 248, 241, 0.95),
+    0 -1px 2px rgba(251, 248, 241, 0.95),
+    1px 0 2px rgba(251, 248, 241, 0.95),
+    -1px 0 2px rgba(251, 248, 241, 0.95);
+  pointer-events: none;
+}
+
+.leaflet-tooltip.egypt-project-tooltip {
+  background-color: #163022;
+  color: #fbf8f1;
+  border: 1px solid #4a5d23;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(22, 48, 34, 0.2);
+}
+
+.leaflet-tooltip.egypt-project-tooltip::before {
+  border-top-color: #163022;
+}
+
+.green-marker-wrapper {
+  background: transparent;
+  border: none;
+}
+
+.green-marker-pin {
+  transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.green-marker-pin:hover,
+.green-marker-pin.is-active {
+  transform: scale(1.16) translateY(-2px);
+}
